@@ -43,7 +43,8 @@
 
             themeSwitch.addEventListener('click', function(){
 
-                currentTheme = themeElement.getAttribute('theme')
+                currentTheme = window.getComputedStyle(themeElement).getPropertyValue('--current-theme')
+                console.log(currentTheme)
 
                 if ([null, undefined, 'prefers', 'default'].indexOf(currentTheme) > -1) {
                     if (prefersDarkTheme) {

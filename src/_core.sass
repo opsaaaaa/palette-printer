@@ -1,0 +1,28 @@
+
+$prefers: ()!default
+$theme-tag: html!default
+$palettes: ()!default
+$default: light!default
+$targets: ()!default
+
+@use 'theme' as * with($palates: $palettes)
+
+// default
+#{$theme-tag}
+    @include theme($default)
+
+// prefers
+@each $scheme, $palette in $prefers
+    @media (prefers-color-scheme: #{$scheme})
+        #{$theme-tag}
+            @include theme($palette)
+    
+// targets
+@each $target, $palette in $targets
+    #{$target}
+        @include theme($palette)
+
+
+
+
+        

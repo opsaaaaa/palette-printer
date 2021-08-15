@@ -1,3 +1,26 @@
+html {
+  --current-theme: light;
+  --bg-main: #fff;
+  --text-main: #000;
+}
 
+@media (prefers-color-scheme: dark) {
+  html {
+    --current-theme: dark;
+    --bg-main: #000;
+    --text-main: #fff;
+  }
+}
+[theme=dark] {
+  --current-theme: dark;
+  --bg-main: #000;
+  --text-main: #fff;
+}
+
+.theme-light {
+  --current-theme: light;
+  --bg-main: #fff;
+  --text-main: #000;
+}
 
 /*# sourceMappingURL=style.css.map */

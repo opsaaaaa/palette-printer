@@ -1,0 +1,10 @@
+@use 'sass:map';
+
+$palates: ()!default;
+
+@mixin theme($paletteName) {
+    --current-theme: #{$paletteName};
+    @each $key, $val in map.get($palates, $paletteName) {
+        --#{$key}: #{$val};
+    }; 
+}
