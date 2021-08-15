@@ -3,11 +3,15 @@
     $palettes: (
         'light': (
             'bg-main': #fff, 
-            'text-main': #000
+            'text-main': #000,
+            'bg-button': rgb(90, 46, 119),
+            'text-button': #fff
         ),
         'dark': (
             'bg-main': #000, 
-            'text-main': #fff
+            'text-main': #fff,
+            'bg-button': rgb(93, 206, 145),
+            'text-button': #000
         )
     ),
     $default: 'light',
@@ -24,3 +28,28 @@
     ),
     $theme-tag: 'html'
 );
+
+body {
+    font-size: 2rem;
+    line-height: 2em;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 25em;
+    margin: auto;
+}
+
+button {
+    font-size: 2.2rem;
+    padding: .8em;
+    color: var(--text-button);
+    background: var(--bg-button);
+    border: none;
+    border-radius: .4em;
+    &:hover {
+        filter: brightness(0.8);
+    }
+}
+

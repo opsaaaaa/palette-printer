@@ -4,6 +4,8 @@ html {
   --current-theme: light;
   --bg-main: #fff;
   --text-main: #000;
+  --bg-button: #5a2e77;
+  --text-button: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,18 +13,24 @@ html {
     --current-theme: dark;
     --bg-main: #000;
     --text-main: #fff;
+    --bg-button: #5dce91;
+    --text-button: #000;
   }
 }
 html[theme=dark] {
   --current-theme: dark;
   --bg-main: #000;
   --text-main: #fff;
+  --bg-button: #5dce91;
+  --text-button: #000;
 }
 
 html[theme=light] {
   --current-theme: light;
   --bg-main: #fff;
   --text-main: #000;
+  --bg-button: #5a2e77;
+  --text-button: #fff;
 }
 
 .bg-main {
@@ -31,6 +39,30 @@ html[theme=light] {
 
 .text-main {
   color: var(--text-main);
+}
+
+body {
+  font-size: 2rem;
+  line-height: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 25em;
+  margin: auto;
+}
+
+button {
+  font-size: 2.2rem;
+  padding: 0.8em;
+  color: var(--text-button);
+  background: var(--bg-button);
+  border: none;
+  border-radius: 0.4em;
+}
+button:hover {
+  filter: brightness(0.8);
 }
 
 /*# sourceMappingURL=style.css.map */
