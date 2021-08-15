@@ -1,4 +1,6 @@
 html {
+  --toggle-themes: dark, light;
+  --toggle-targets: [theme=dark], [theme=light];
   --current-theme: light;
   --bg-main: #fff;
   --text-main: #000;
@@ -11,16 +13,24 @@ html {
     --text-main: #fff;
   }
 }
-[theme=dark] {
+html[theme=dark] {
   --current-theme: dark;
   --bg-main: #000;
   --text-main: #fff;
 }
 
-.theme-light {
+html[theme=light] {
   --current-theme: light;
   --bg-main: #fff;
   --text-main: #000;
+}
+
+.bg-main {
+  background: var(--bg-main);
+}
+
+.text-main {
+  color: var(--text-main);
 }
 
 /*# sourceMappingURL=style.css.map */

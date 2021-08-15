@@ -16,7 +16,11 @@
     ),
     $targets: (
         '[theme=dark]': 'dark',
-        '.theme-light': 'light' 
+        '[theme=light]': 'light' 
+    ),
+    $tokens: (
+        'background': ('bg-main': 'bg-main'),
+        'color': ('text-main': 'text-main')
     ),
     $theme-tag: 'html'
 );

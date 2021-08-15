@@ -1,0 +1,8 @@
+
+$tokens: ()!default
+
+@each $property, $vars in $tokens
+    @each $token, $var in $vars
+        .#{$token}
+            #{$property}: var(--#{$var})
+            

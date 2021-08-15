@@ -28,42 +28,35 @@
 
             let themeElement = document.querySelector('html')
             let themeSwitch = document.querySelector('#palette-theme-switch');
-            let themes = window.getComputedStyle(themeElement).getPropertyValue('--palette-toggle-themes').trim().split(/\s*,\s*/)
-            console.log(themes)
-            let currentTheme;
-            let themeIndex;
             let prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)');
 
             // Choose theme method stores the value in the browser and updates the html tag
+            let themes = window.getComputedStyle(themeElement).getPropertyValue('--toggle-themes').trim().split(/\s*,\s*/)
+
+            function toggleTheme() {
+                let current = window.getComputedStyle(themeElement).getPropertyValue('--current-theme').trim()
+                console.log(current)
+                console.log(themes)
+
+                let index = themes.indexOf(current)
+                
+                if (index >= themes.length - 1) {
+                    index = 0
+                } else {
+                    index += 1
+                }
+
+                console.log(index)
+                console.log(themes[index])
+                themeElement.setAttribute('theme', themes[index])
+            };
 
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(v){
-                prefersDarkTheme = v
-                themeElement.setAttribute('theme', 'prefers')
+                toggleTheme()
             });
 
             themeSwitch.addEventListener('click', function(){
-
-                currentTheme = window.getComputedStyle(themeElement).getPropertyValue('--current-theme')
-                console.log(currentTheme)
-
-                if ([null, undefined, 'prefers', 'default'].indexOf(currentTheme) > -1) {
-                    if (prefersDarkTheme) {
-                        currentTheme = 'dark'
-                    } else {
-                        currentTheme = 'light'
-                    }
-                }
-
-                themeIndex = themes.indexOf(currentTheme)
-                
-                if (themeIndex >= themes.length - 1) {
-                    themeIndex = 0
-                } else {
-                    themeIndex += 1
-                }
-                
-                themeElement.setAttribute('theme', themes[themeIndex])
-                // Store theme preference
+                toggleTheme()
             },false)
 
         }, false);

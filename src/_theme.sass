@@ -1,0 +1,39 @@
+
+$prefers: ()!default
+$theme-tag: html!default
+$palettes: ()!default
+$default: light!default
+$targets: ()!default
+
+@use 'sass:map'
+
+@mixin _theme($paletteName)
+    --current-theme: #{$paletteName}
+    @each $key, $val in map.get($palettes, $paletteName)
+        --#{$key}: #{$val}
+
+@mixin _targets
+    --toggle-themes: #{map-values($targets)}
+    --toggle-targets: #{map-keys($targets)}
+
+
+// default
+#{$theme-tag}
+    @include _targets
+    @include _theme($default)
+
+// prefers
+@each $scheme, $palette in $prefers
+    @media (prefers-color-scheme: #{$scheme})
+        #{$theme-tag}
+            @include _theme($palette)
+    
+// targets
+@each $target, $palette in $targets
+    #{$theme-tag}#{$target}
+        @include _theme($palette)
+
+
+
+
+        
