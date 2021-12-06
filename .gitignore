@@ -4,4 +4,4 @@ test/test.css.map
 *.css.map
 *.sass.map
 *.scss.map
-
+*.tgz
