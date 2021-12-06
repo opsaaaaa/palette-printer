@@ -4,7 +4,7 @@ A sass tool for generating themes and color-schemes
 Example:
 
 ```scss
-@use '../index.scss' as p with (
+@use 'path/to/palette-printer' as p with (
     $palettes: (
         'light': (
             'bg-main': #fff, 
