@@ -1,12 +1,12 @@
 {
   "name": "palette-printer",
   "version": "1.0.0",
-  "description": "a sass tool for generating themes and color-schemes",
+  "description": "A sass tool for generating themes and color-schemes",
   "main": "index.js",
   "scripts": {
     "test": "npx sass test/test.sass test/test.css",
     "demo": "npx sass demo/style.scss demo/style.css",
-    "build": "npx sass index.scss dist/fo-mason.min.css --style=compressed && npx sass index.scss dist/fo-mason.css"
+    "build": "npx sass index.scss dist/palette-printer.min.css --style=compressed && npx sass index.scss dist/palette-printer.css"
   },
   "devDependencies": {
     "sass": "~1.37"
