@@ -1,4 +1,7 @@
+test/test.css
+test/test.css.map
 .sass-cache/
 *.css.map
 *.sass.map
 *.scss.map
+

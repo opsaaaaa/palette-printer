@@ -4,7 +4,7 @@
   "description": "A sass tool for generating themes and color-schemes",
   "main": "index.js",
   "scripts": {
-    "test": "npx sass test/test.sass test/test.css",
+    "test": "npx sass test/test.scss test/test.css",
     "demo": "npx sass demo/style.scss demo/style.css",
     "build": "npx sass index.scss dist/palette-printer.min.css --style=compressed && npx sass index.scss dist/palette-printer.css"
   },
