@@ -1,5 +1,7 @@
 # palette-printer
-A sass tool for generating themes and color-schemes
+
+A sass tool that takes all the effort out of supporting multiple color schemes on your website.
+
 
 Example:
 
