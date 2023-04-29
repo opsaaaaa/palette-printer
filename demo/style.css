@@ -4,7 +4,7 @@ html {
   --current-theme: light;
   --bg-main: #fff;
   --text-main: #000;
-  --bg-button: #5a2e77;
+  --bg-button: rgb(90, 46, 119);
   --text-button: #fff;
 }
 
@@ -13,7 +13,7 @@ html {
     --current-theme: dark;
     --bg-main: #000;
     --text-main: #fff;
-    --bg-button: #5dce91;
+    --bg-button: rgb(93, 206, 145);
     --text-button: #000;
   }
 }
@@ -21,7 +21,7 @@ html[theme=dark] {
   --current-theme: dark;
   --bg-main: #000;
   --text-main: #fff;
-  --bg-button: #5dce91;
+  --bg-button: rgb(93, 206, 145);
   --text-button: #000;
 }
 
@@ -29,7 +29,7 @@ html[theme=light] {
   --current-theme: light;
   --bg-main: #fff;
   --text-main: #000;
-  --bg-button: #5a2e77;
+  --bg-button: rgb(90, 46, 119);
   --text-button: #fff;
 }
 

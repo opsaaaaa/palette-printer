@@ -1,5 +1,5 @@
 
-@use '../index.scss' as p with (
+@use '../theme' with (
     $palettes: (
         'light': (
             'bg-main': #fff, 
@@ -22,12 +22,17 @@
         '[theme=dark]': 'dark',
         '[theme=light]': 'light' 
     ),
+    $theme-tag: 'html'
+);
+
+@use '../token' with (
     $tokens: (
         'background': ('bg-main': 'bg-main'),
         'color': ('text-main': 'text-main')
-    ),
-    $theme-tag: 'html'
+    )
 );
+
+@use '../palette' as *;
 
 body {
     font-size: 2rem;
@@ -44,8 +49,8 @@ body {
 button {
     font-size: 2.2rem;
     padding: .8em;
-    color: p.palette('text-button');
-    background: p.palette('bg-button');
+    color: palette('text-button');
+    background: palette('bg-button');
     border: none;
     border-radius: .4em;
     &:hover {

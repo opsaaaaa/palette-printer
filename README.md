@@ -4,7 +4,7 @@ A sass tool for generating themes and color-schemes
 Example:
 
 ```scss
-@use 'path/to/palette-printer' as p with (
+@use 'path/to/palette-printer/theme' with (
     $palettes: (
         'light': (
             'bg-main': #fff, 
@@ -27,12 +27,17 @@ Example:
         '[theme=dark]': 'dark',
         '[theme=light]': 'light' 
     ),
+    $theme-tag: 'html'
+);
+
+@use 'path/to/palette-printer/token' with (
     $tokens: (
         'background': ('bg-main': 'bg-main'),
         'color': ('text-main': 'text-main')
-    ),
-    $theme-tag: 'html'
+    )
 );
+
+@use 'path/to/palette-printer/palette' as *;
 
 
 button {
@@ -40,6 +45,7 @@ button {
     background: p.palette('bg-button');
     ...
 }
+
 
 ```
 
