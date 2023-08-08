@@ -1,17 +1,21 @@
-
+//--- Palette Printer Config ---//
 @use '../theme' with (
     $palettes: (
         'light': (
             'bg-main': #fff, 
             'text-main': #000,
             'bg-button': rgb(90, 46, 119),
-            'text-button': #fff
+            'text-button': #fff,
+            'text-action': #248,
+            'text-action-hover': #46a
         ),
         'dark': (
-            'bg-main': #000, 
+            'bg-main': #000,
             'text-main': #fff,
             'bg-button': rgb(93, 206, 145),
-            'text-button': #000
+            'text-button': #000,
+            'text-action': #9af,
+            'text-action-hover': #acf
         )
     ),
     $default: 'light',
@@ -20,7 +24,7 @@
     ),
     $targets: (
         '[theme=dark]': 'dark',
-        '[theme=light]': 'light' 
+        '[theme=light]': 'light'
     ),
     $theme-tag: 'html'
 );
@@ -34,20 +38,25 @@
 
 @use '../palette' as *;
 
+
 body {
-    font-size: 2rem;
-    line-height: 2em;
     padding: 0;
     margin: 0;
 }
 
+p {
+    font-size: 2rem;
+    line-height: 2em;
+    max-width: 60rem;
+}
+
 .container {
-    max-width: 25em;
     margin: auto;
+    max-width: 35em;
 }
 
 button {
-    font-size: 2.2rem;
+    font-size: 2rem;
     padding: .8em;
     color: palette('text-button');
     background: palette('bg-button');
@@ -56,5 +65,12 @@ button {
     &:hover {
         filter: brightness(0.8);
     }
+}
+
+a {
+    color: palette("text-action");
+}
+a:hover, a:focus, a:active {
+    color: palette("text-action-hover");
 }
 

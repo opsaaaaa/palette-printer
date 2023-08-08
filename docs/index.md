@@ -1,11 +1,20 @@
-# palette-printer
+---
+layout: root
+---
+
+
+# Sass Palette Printer
 
 A sass tool that takes all the effort out of supporting multiple color schemes on your website.
 
-[Live Demo](https://opsaaaaa.github.io/palette-printer/)
+[github/opsaaaaa/palette-printer](https://github.com/opsaaaaa/palette-printer)
+
+<button id="palette-theme-switch">
+  Switch Theme
+</button>
 
 
-Example:
+## Usage:
 
 ```scss
 @use 'path/to/palette-printer/theme' with (

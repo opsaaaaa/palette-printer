@@ -6,6 +6,8 @@ html {
   --text-main: #000;
   --bg-button: rgb(90, 46, 119);
   --text-button: #fff;
+  --text-action: #248;
+  --text-action-hover: #46a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,6 +17,8 @@ html {
     --text-main: #fff;
     --bg-button: rgb(93, 206, 145);
     --text-button: #000;
+    --text-action: #9af;
+    --text-action-hover: #acf;
   }
 }
 html[theme=dark] {
@@ -23,6 +27,8 @@ html[theme=dark] {
   --text-main: #fff;
   --bg-button: rgb(93, 206, 145);
   --text-button: #000;
+  --text-action: #9af;
+  --text-action-hover: #acf;
 }
 
 html[theme=light] {
@@ -31,6 +37,8 @@ html[theme=light] {
   --text-main: #000;
   --bg-button: rgb(90, 46, 119);
   --text-button: #fff;
+  --text-action: #248;
+  --text-action-hover: #46a;
 }
 
 .bg-main {
@@ -42,19 +50,23 @@ html[theme=light] {
 }
 
 body {
-  font-size: 2rem;
-  line-height: 2em;
   padding: 0;
   margin: 0;
 }
 
+p {
+  font-size: 2rem;
+  line-height: 2em;
+  max-width: 60rem;
+}
+
 .container {
-  max-width: 25em;
   margin: auto;
+  max-width: 35em;
 }
 
 button {
-  font-size: 2.2rem;
+  font-size: 2rem;
   padding: 0.8em;
   color: var(--text-button);
   background: var(--bg-button);
@@ -63,6 +75,14 @@ button {
 }
 button:hover {
   filter: brightness(0.8);
+}
+
+a {
+  color: var(--text-action);
+}
+
+a:hover, a:focus, a:active {
+  color: var(--text-action-hover);
 }
 
 /*# sourceMappingURL=style.css.map */
