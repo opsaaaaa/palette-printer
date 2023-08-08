@@ -5,3 +5,5 @@ test/test.css.map
 *.sass.map
 *.scss.map
 *.tgz
+docs/_site/
+_site/
